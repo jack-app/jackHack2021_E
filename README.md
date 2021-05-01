@@ -11,22 +11,22 @@ cd Desktop/offra_in に移動後、以下のコマンドを実行してくださ
 (実際にコマンドを入力する際は"$"は省略してください)
 
 
-####起動
+#### 起動
 ```
 $ docker-compose up -d --build
 ```
 
-####停止
+#### 停止
 ```
 $ docker-compose stop
 ```
 
-####再起動
+#### 再起動
 ```
 $ docker-compose restart
 ```
 
-####コンテナに入る（ex. pythonファイルを実行したいとき）
+#### コンテナに入る（ex. pythonファイルを実行したいとき）
 ```
 $ docker-compose exec flask bash
 ```
