@@ -1,23 +1,36 @@
 # オフラin…？
 
+
 オフラin…？は好きな画像をアップロードして「オフラをさがせ！」というゲームができるwebアプリケーションです。
+
+
+
 
 ## docker関連コマンド
 cd Desktop/offra_in に移動後、以下のコマンドを実行してください。
+(実際にコマンドを入力する際は"$"は省略してください)
 
-起動
-‵ $ docker-compose up -d --build ‵
 
-停止
-‵ $ docker-compose stop ‵
+####起動
+```
+$ docker-compose up -d --build
+```
 
-再起動
-‵ $ docker-compose restart ‵
+####停止
+```
+$ docker-compose stop
+```
 
-コンテナに入る（ex. pythonファイルを実行したいとき）
-‵ $ docker-compose exec flask bash ‵
+####再起動
+```
+$ docker-compose restart
+```
+
+####コンテナに入る（ex. pythonファイルを実行したいとき）
+```
+$ docker-compose exec flask bash
+```
 
 
 ### その他参考リンク
-docker-composeとdockerコマンドまとめ
-<https://qiita.com/tomo62/items/d966908cbc79a4c52dc7>
+[docker-composeとdockerコマンドまとめ](https://qiita.com/tomo62/items/d966908cbc79a4c52dc7)
