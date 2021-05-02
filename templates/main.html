@@ -1,4 +1,12 @@
 {%- extends "layout.html" %}
 {%- block content %}
 <h1>Main page</h1>
+<button id="hello">こんにちは</button>
+<audio id="sound-file1" preload="auto">
+	<source src="../static/sounds/Quiz-Correct_Answer02-3.mp3" type="audio/mp3">
+</audio>
+<audio id="sound-file2" preload="auto">
+	<source src="../static/sounds/Quiz-Wrong_Buzzer02-3.mp3" type="audio/mp3">
+</audio>
+<script src="../static/js/sound.js"></script>
 {%- endblock %}
