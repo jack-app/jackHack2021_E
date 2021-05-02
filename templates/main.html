@@ -1,21 +1,21 @@
 {%- extends "layout.html" %}
 {%- block content %}
-<div class="container">
-<h1>Main page</h1>
-<div id="imageArea" style="width:80%; margin:auto;">
-    <img src="../static/image/offla-hide.png" style="width:100%; display:block; vertical-align:top;">
+<div class="main-container">
+<div id="imageArea">
+    <img src="../static/image/offla-hide.png" id="hideImage">
 </div>
 </div>
-<button id="hello">こんにちは</button>
 <audio id="sound-file1" preload="auto">
 	<source src="../static/sounds/Quiz-Correct_Answer02-3.mp3" type="audio/mp3">
 </audio>
 <audio id="sound-file2" preload="auto">
 	<source src="../static/sounds/Quiz-Wrong_Buzzer02-3.mp3" type="audio/mp3">
 </audio>
+<div class="main-modal-mask"></div>
 <script src="../static/js/touch.js"></script>
 <script src="../static/js/sound.js"></script>
 <script>
-    let point = {{ point | tojson }};
+    let answer_area_x = {{ answer_area_x | tojson }};
+    let answer_area_y = {{ answer_area_y | tojson }};
 </script>
 {%- endblock %}

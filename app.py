@@ -14,8 +14,8 @@ def upload():
 
 @app.route('/main', methods=['GET'])
 def main():
-    point = create_image.create_image()
-    return render_template("main.html", point = point)
+    answer_area_x, answer_area_y = create_image.create_image()
+    return render_template("main.html", answer_area_x = answer_area_x, answer_area_y = answer_area_y)
 
 @app.route('/result')
 def result():

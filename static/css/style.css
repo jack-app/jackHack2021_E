@@ -1,0 +1,18 @@
+#imageArea {
+    margin: auto;
+    width: 80vw;
+}
+
+#hideImage {
+    width: 100%;
+    display: block;
+    vertical-align: top;
+}
+
+.main-modal-mask {
+    position: fixed;
+    z-index: 1000;
+    background-color: #000;
+    opacity: 0.3;
+    display: none;
+}
