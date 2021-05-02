@@ -1,4 +1,13 @@
 {%- extends "layout.html" %}
 {%- block content %}
+<div class="container">
 <h1>Main page</h1>
+<div id="imageArea" style="width:80%; margin:auto;">
+    <img src="../static/image/offla-hide.png" style="width:100%; display:block; vertical-align:top;">
+</div>
+</div>
+<script src="../static/js/touch.js"></script>
+<script>
+    let point = {{ point | tojson }};
+</script>
 {%- endblock %}

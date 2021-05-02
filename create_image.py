@@ -3,7 +3,6 @@ import numpy as np
 from PIL import Image
 import random
 
-
 class CvOverlayImage(object):
     """
     [summary]
@@ -56,6 +55,22 @@ class CvOverlayImage(object):
 
         return cv_bgr_result_image
 
+def create_image():
+    cv_background_image = cv.imread("static/image/bg_takeyabu_layer2.jpg")
+    cv_overlay_image = cv.imread(
+        "static/image/ninja_hashiru.png",
+        cv.IMREAD_UNCHANGED)  # IMREAD_UNCHANGEDを指定しα込みで読み込む
+    cv_overlay_image = cv.resize(cv_overlay_image, (100, 100))
+    
+    x=int(random.uniform(10,500))
+    y=int(random.uniform(10,500))      
+    point = (x, y)
+
+    image = CvOverlayImage.overlay(cv_background_image, cv_overlay_image,
+            point)
+    cv.imwrite('static/image/offla-hide.png',image)
+
+    return point
     
 if __name__ == '__main__':
     cv_background_image = cv.imread("static/image/bg_takeyabu_layer2.jpg")
