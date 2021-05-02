@@ -1,6 +1,8 @@
-from flask import Flask, render_template, request, session
+from flask import Flask, render_template, request, session, redirect, url_for
 import cv2
+import os
 import create_image
+from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 
@@ -8,9 +10,15 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-@app.route('/upload')
+@app.route('/upload', methods=['GET','POST'])
 def upload():
-    return render_template("upload.html")
+    if request.method == 'POST':
+        file = request.files['file']
+        filename = secure_filename(file.filename)
+        file.save("./static/image/upload/bg_image" + os.path.splitext(filename)[1])
+        return redirect(url_for('main'))
+    else:
+        return render_template("upload.html")
 
 @app.route('/main', methods=['GET'])
 def main():

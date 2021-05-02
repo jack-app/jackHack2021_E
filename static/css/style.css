@@ -1,3 +1,15 @@
+/*
+ * upload.html
+ *
+*/
+#preview {
+    height: 40vh;
+}
+
+/*
+ * main.html
+ *
+*/
 #imageArea {
     margin: auto;
     width: 80vw;

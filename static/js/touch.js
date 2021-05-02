@@ -12,6 +12,7 @@ $(function(){
 
     $("#imageArea").on('click', function(e) {
         console.log("座標" + e.offsetX + "," + e.offsetY);
+        console.log("答え" + answer_area_x + "," + answer_area_y);
         console.log(cancelFlg);
 
         if(cancelFlg){
@@ -50,3 +51,12 @@ $(function(){
         }
     });
 });
+
+    //     if 'file' not in request.files:
+    //         flash('ファイルがありません')
+    //         return redirect(request.url)
+        
+    //     if file.filename == '':
+    //         flash('ファイルがありません')
+    //         return redirect(request.url)
+

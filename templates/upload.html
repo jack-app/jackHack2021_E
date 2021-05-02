@@ -1,4 +1,21 @@
 {%- extends "layout.html" %}
 {%- block content %}
 <h1>Upload page</h1>
+<form method="POST" action="/upload" enctype="multipart/form-data">
+   <input name="file" type="file"/>
+   <input value="送信" type="submit"/>
+</form>
+<img id="preview">
+<script>
+$(function(){
+    $('input[type="file"]').on('change', function(e) {
+        console.log("hey");
+        let reader = new FileReader();
+        reader.onload = function (e) {
+            $("#preview").attr('src', e.target.result);
+        }
+        reader.readAsDataURL(e.target.files[0]);
+    });
+});
+</script>
 {%- endblock %}
