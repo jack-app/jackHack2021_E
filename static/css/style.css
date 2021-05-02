@@ -1,0 +1,23 @@
+@charset "UTF-8";
+body  {
+    background-color: #e8f52c;
+}
+.time  {
+  color: #000; font-size: 80px; margin-top: 20px; margin-left: 270px;
+}
+.result {
+  color: #000; font-size: 240px; background-color: #fff; margin-left: 270px; margin-top: 0px;
+}
+.restart  {
+  color: #fff; font-size: 40px; background-color: #567de7; width: 200px; margin-top: -300; margin-left: 470px;
+}
+.title {
+  color: #fff; font-size: 40px; background-color: #567de7; width: 200px; margin-top: -300; margin-left: 470px;
+}
+
+.time1 {
+  color: #2b5de5; background-color: #efff00; font-size: 50px; margin-top: 40px; margin-left: 40px;
+}
+.time2 {
+  color: #2b5de5; font-size: 50px;
+}
