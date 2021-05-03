@@ -75,8 +75,6 @@ def create_image():
             point)
     cv.imwrite('static/image/offla-hide.png',image)
 
-    os.remove(upload_path)
-
     return answer_area_x, answer_area_y
 
 def cal_image_size(bg_img, overlay_img):

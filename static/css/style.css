@@ -4,12 +4,17 @@
 */
 #preview {
     height: 40vh;
+    text-align: center;
 }
 
 /*
  * main.html
  *
 */
+.stopwatch {
+    font-size: 30px;
+}
+
 #imageArea {
     margin: auto;
     width: 80vw;

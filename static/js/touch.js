@@ -44,9 +44,16 @@ $(function(){
                 return
             }
 
+            const timeResult = stopTimer();
+            console.log("result=>"+timeResult);
             soundJudge(true);
             setTimeout(()=>{
-                window.location.href = '/result';
+                window.location.href = '/result?time_result='+timeResult;
+                // $.ajax({
+                //     url: '/result?time_result='+timeResult,
+                //     type: 'POST',
+                //     // data: {time_result: timeResult}
+                // });
             }, 1500);
         }
     });

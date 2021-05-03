@@ -1,9 +1,12 @@
 {%- extends "layout.html" %}
 {%- block content %}
 <div class="main-container">
-<div id="imageArea">
-    <img src="../static/image/offla-hide.png" id="hideImage">
-</div>
+    <div id="imageArea">
+        <img src="../static/image/offla-hide.png" id="hideImage">
+    </div>
+    <div class="stopwatch">
+        <p id="timer">00:00.00</p>
+    </div>
 </div>
 <audio id="sound-file1" preload="auto">
 	<source src="../static/sounds/Quiz-Correct_Answer02-3.mp3" type="audio/mp3">
@@ -14,6 +17,7 @@
 <div class="main-modal-mask"></div>
 <script src="../static/js/touch.js"></script>
 <script src="../static/js/sound.js"></script>
+<script src="../static/js/stopwatch.js"></script>
 <script>
     let answer_area_x = {{ answer_area_x | tojson }};
     let answer_area_y = {{ answer_area_y | tojson }};

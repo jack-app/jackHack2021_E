@@ -20,14 +20,23 @@ def upload():
     else:
         return render_template("upload.html")
 
-@app.route('/main', methods=['GET'])
+@app.route('/main', methods=['GET','POST'])
 def main():
-    answer_area_x, answer_area_y = create_image.create_image()
-    return render_template("main.html", answer_area_x = answer_area_x, answer_area_y = answer_area_y)
+    if request.method == 'POST':
+        time_result = request.form["time_result"]
+        return redirect(url_for('result', time_result = time_result))
+    else:
+        answer_area_x, answer_area_y = create_image.create_image()
+        return render_template("main.html", answer_area_x = answer_area_x, answer_area_y = answer_area_y)
 
 @app.route('/result')
 def result():
-    return render_template("result.html")
+    # upload_path = "static/image/upload/" + os.listdir("static/image/upload")[0]
+    # if upload_path:
+    #     os.remove(upload_path)
+    print(request.args.get("time_result"))
+    result = request.args.get("time_result")
+    return render_template("result.html", result = result)
 
 if __name__ == '__main__':
     app.debug = True
