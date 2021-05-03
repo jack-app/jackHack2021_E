@@ -1,4 +1,38 @@
 {%- extends "layout.html" %}
 {%- block content %}
-<h1>Upload page</h1>
+<div class="upload-container">
+    <header></header>
+    <div class="upload-explain">隠れたオフラを見つけ、クリックしよう！</div>
+    <div class="upload-content">
+        <div class="upload-left">
+            <form method="POST" action="/upload" enctype="multipart/form-data">
+                <div class="upload-image-preview">
+                    <img id="preview" src="../static/image/no_image_square.jpg">
+                </div>
+                <div class="upload-buttons">
+                    <label for="file_upload" class="upload-button1">
+                        画像選択
+                        <input id="file_upload" name="file" type="file" style="display: none;" />
+                    </label>
+                    <label for="file_submit" class="upload-button2">
+                        さっそく始める
+                    </label>
+                    <input id="file_submit" type="submit" style="display: none;" />
+                </div>
+            </form>
+        </div>
+        <div class="upload-right"></div>
+    </div>
+</div>
+<script>
+$(function(){
+    $('input[type="file"]').on('change', function(e) {
+        let reader = new FileReader();
+        reader.onload = function (e) {
+            $("#preview").attr('src', e.target.result);
+        }
+        reader.readAsDataURL(e.target.files[0]);
+    });
+});
+</script>
 {%- endblock %}

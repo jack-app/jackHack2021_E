@@ -1,0 +1,299 @@
+* {
+    font-family: 'New Tegomin', serif;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    background-color: #a82e2e;
+    height: 50px;
+}
+
+/*
+ * index.html
+ *
+ */
+.index-container {
+    width: 100%;
+    height: 100%;
+    background-color: #3c3c3c;
+}
+.index-header-comment {
+    font-weight: 10px;
+    font-size: 50px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    color: #ddd;
+    /* -webkit-text-stroke: 0.5px #dddddd; */
+
+}
+.index-box1 {
+    margin: auto;
+    width: 800px;
+    height: 300px;
+    font-weight: bold;
+    /* color:#2e2b4a;
+    background: #a82e2e;
+    border: solid 3px #810000;
+    border-radius: 200px; */
+    color: #ddd;
+    text-align: center;
+    font-size: 100px;
+    padding-bottom: 20px;
+    padding-top: auto;
+}
+.index-box2 {
+    padding-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    /* height: 100px; */
+    background: #a82e2e;
+    border: solid 3px #810000;/*線*/
+    border-radius: 200px;/*角の丸み*/
+    text-align: center;
+    font-size: 50px; 
+    font-family: 'New Tegomin', serif;
+    transition-property: background;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0.1s;
+}
+.index-box2:hover {
+    background-color: #810000;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0.1s;
+}
+.index-box2 > a {
+    color: #2b2e4a;/*文字色*/
+    font-weight: bold;
+}
+
+/*
+ * upload.html
+ *
+ */
+.upload-container {
+    background-color: #3c3c3c;
+    height: 100vh;
+}
+.upload-explain {
+    font-size: 3em;
+    text-align: center;
+    color: #ddd;/*文字色*/
+    margin: 40px auto 50px;
+    /* -webkit-text-stroke: 0.5px #dddddd; */
+}
+.upload-content {
+    display: flex;
+}
+.upload-image-preview {
+    height: 300px;
+    width: 50vw;
+    text-align: center;
+}
+#preview {
+    height: 100%;
+    margin: auto;
+}
+.upload-buttons {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.upload-button1 {
+    margin: 10px auto;
+    padding: 20px;
+    /* width: 200px; */
+    /* height: 80px; */
+    font-weight: bold;
+    color: #2b2e4a;/*文字色*/
+    background: #a82e2e;
+    border: solid 3px #810000;/*線*/
+    border-radius: 200px;/*角の丸み*/
+    text-align: center;
+    font-size: 25px;
+    float: left;
+    font-family: 'New Tegomin', serif;
+    transition-property: background;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0.1s;
+}
+.upload-button1:hover{
+    /* width: 200px; */
+    /* height: 80px; */
+    font-weight: bold;
+    color: #2b2e4a;/*文字色*/
+    background: #810000;
+    border: solid 3px #810000;/*線*/
+    border-radius: 200px;/*角の丸み*/
+    text-align: center;
+    transition-property: background;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0.1s;
+}
+.upload-button2 {
+    margin-top: 10px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    width: 200px;
+    /* height: 80px; */
+    font-size: 25px;
+    font-weight: bold;
+    color: #2b2e4a;/*文字色*/
+    background: #a82e2e;
+    border: solid 3px #810000;/*線*/
+    border-radius: 200px;/*角の丸み*/
+    text-align: center;
+    vertical-align: middle;
+}
+.upload-button2:hover {
+    margin-top: 10px;
+    padding: 20px;
+    width: 200px;
+    /* height: 80px; */
+    font-weight: bold;
+    color: #2b2e4a;/*文字色*/
+    background-color: #810000;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0.1s;
+
+}
+
+/*
+ * main.html
+ *
+ */
+.container2 {
+  background-color: #3c3c3c; 
+  height: 100vh;
+}
+.main-box1 { 
+  color: #eeeeee;
+  font-size: 50px;
+  background-color: #a82e2e;
+  border-radius: 100px;
+  width: 400px;
+  padding: 10px 30px;
+  margin-left: 20px;
+}
+.main-box2 {
+  color: #dddddd;
+  font-size: 200px;
+  -webkit-text-stroke: #9c9c9c 3px;
+  text-align: center;
+}
+/* .main-box3 {
+  color: #dddddd; font-size: 200px; -webkit-text-stroke: #9c9c9c 3px; text-align: center;
+}
+.main-box4 {
+  color: #dddddd; font-size: 200px; -webkit-text-stroke: #9c9c9c 3px; text-align: center;
+}
+.minicontainer {
+  line-height: 0px; margin-top: 190px;
+} */
+
+#imageArea {
+    margin: 50px auto;
+    height: 60vh;
+    text-align: center;
+}
+
+#hideImage {
+    height: 100%;
+    margin: auto;
+    display: block;
+    vertical-align: top;
+}
+
+.main-modal-mask {
+    position: fixed;
+    z-index: 1000;
+    background-color: #000;
+    opacity: 0.3;
+    display: none;
+}
+ 
+/*
+ * result.css
+ *
+ */
+.container1  {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #3c3c3c;
+    font-family: 'New Tegomin', serif;
+}
+.result-box1  {
+  color: #000;
+  font-size: 10em;
+  margin-left: 20vw;
+  -webkit-text-stroke: 2px #dddddd;
+}
+.result-box2 {
+  color: #000;
+  font-size: 13em;
+  background-color: #eeeeee; 
+  /* width: 730px; */
+  /* height: 135px; */
+  margin: 50px auto;
+  border-radius: 40px; border: solid 3px #9c9c9c; 
+  text-align: center; line-height: 165px;
+}
+.result-box2 > p {
+    margin: 0 20px 25px;
+}
+.result-box3  {
+  font-size: 70px;
+  width: 350px;
+  margin: 40px auto; 
+  padding-left: 73px;
+  padding-bottom:10px;
+  border-radius: 100px;
+  border: solid 3px #9c9c9c;
+  -webkit-text-stroke: 1px #9c9c9c;
+  background-color:#a82e2e;
+}
+.result-box3:hover {
+  background-color: crimson;
+  transition-property: background-color;
+  transition-duration: 0.1s;
+  transition-timing-function: ease;
+  transition-delay: 0.1s;
+}
+.result-box4 {
+  font-size: 70px; 
+  width: 350px; 
+  margin: 40px auto; 
+  padding-left: 73px;
+  padding-bottom: 9px;
+  border-radius: 100px;
+  border: solid 3px #9c9c9c;
+  -webkit-text-stroke: 1px #9c9c9c;
+  background:#2e2b4a;
+}
+.result-box4:hover {
+  background:mediumblue;
+  transition-property: background;
+  transition-duration: 0.1s;
+  transition-timing-function: ease;
+  transition-delay: 0.1s;
+}
+
+

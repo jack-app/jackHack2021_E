@@ -212,7 +212,8 @@ select {
 button,
 [type="button"],
 [type="reset"],
-[type="submit"] {
+[type="submit"],
+[type="file"] {
     -webkit-appearance: button;
 }
 

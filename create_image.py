@@ -2,7 +2,7 @@ import cv2 as cv
 import numpy as np
 from PIL import Image
 import random
-
+import os
 
 class CvOverlayImage(object):
     """
@@ -56,21 +56,46 @@ class CvOverlayImage(object):
 
         return cv_bgr_result_image
 
-    
-if __name__ == '__main__':
-    cv_background_image = cv.imread("static/image/bg_takeyabu_layer2.jpg")
+def create_image():
+    upload_path = "static/image/upload/" + os.listdir("static/image/upload")[0]
+    cv_background_image = cv.imread(upload_path)
     cv_overlay_image = cv.imread(
         "static/image/ninja_hashiru.png",
         cv.IMREAD_UNCHANGED)  # IMREAD_UNCHANGEDを指定しα込みで読み込む
-    cv_overlay_image = cv.resize(cv_overlay_image, (100, 100))
+    size = cal_image_size(cv_background_image, cv_overlay_image)
+    cv_overlay_image = cv.resize(cv_overlay_image, size)
     
     x=int(random.uniform(10,500))
     y=int(random.uniform(10,500))      
-
     point = (x, y)
+
+    answer_area_x, answer_area_y = cal_answer_area(size, point)
 
     image = CvOverlayImage.overlay(cv_background_image, cv_overlay_image,
             point)
-
-    
     cv.imwrite('static/image/offla-hide.png',image)
+
+    return answer_area_x, answer_area_y
+
+def cal_image_size(bg_img, overlay_img):
+    bg_height, bg_width = bg_img.shape[:2]
+    overlay_height, overlay_width = overlay_img.shape[:2]
+
+    if bg_height > bg_width:
+        new_overlay_width = bg_width * 0.1
+        new_overlay_height = new_overlay_width * overlay_height / overlay_width
+    else:
+        new_overlay_height = bg_height * 0.1
+        new_overlay_width = new_overlay_height * overlay_width / overlay_height
+
+    size = (int(new_overlay_height), int(new_overlay_width))
+    return size 
+
+def cal_answer_area(size, point):
+    area_height, area_width = size
+    area_x, area_y = point
+
+    area_range_x = (area_x-area_width*0.7, area_x+area_width*0.7)
+    area_range_y = (area_y-area_height*0.7, area_y+area_height*0.7)
+
+    return area_range_x, area_range_y
