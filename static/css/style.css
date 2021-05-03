@@ -5,6 +5,7 @@
 html,body {
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 header {
@@ -173,6 +174,10 @@ header {
     transition-delay: 0.1s;
 
 }
+.upload-right {
+  width: 50vw;
+  text-align: center;
+}
 
 /*
  * main.html
@@ -226,6 +231,17 @@ header {
     background-color: #000;
     opacity: 0.3;
     display: none;
+}
+.main-offla-icon {
+    position: fixed;
+    right: 5%;
+    bottom: 15%;
+    z-index: 5000;
+    height: 20%;
+    text-align: center;
+}
+.main-offla-icon > img {
+    height: 100%;
 }
  
 /*

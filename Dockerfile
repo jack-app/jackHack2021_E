@@ -7,6 +7,8 @@ RUN apt-get update -qq
 RUN pip install --upgrade pip
 RUN apt-get install -y libgl1-mesa-dev
 
+ENV DISPLAY=:99
+
 WORKDIR /usr/src/app
 
 ADD requirements.txt requirements.txt
