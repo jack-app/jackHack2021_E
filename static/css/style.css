@@ -1,16 +1,179 @@
+html,body {
+    width: 100%;
+    height: 100%;
+    font-family: 'New Tegomin', serif;
+}
+
+header {
+    background-color: #a82e2e;
+    height: 50px;
+}
+
+/*
+ * index.html
+ *
+ */
+.index-container {
+    width: 100%;
+    height: 100%;
+    background-color: #3c3c3c;
+}
+.index-header-comment {
+    font-weight: 10px;
+    font-size: 50px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    color: black;
+    -webkit-text-stroke: 0.5px #dddddd;
+
+}
+.index-box1 {
+    margin: auto;
+    width: 800px;
+    height: 300px;
+    font-weight: bold;
+    color:#2e2b4a;/*文字色*/
+    background: #a82e2e;
+    border: solid 3px #810000;/*線*/
+    border-radius: 200px;/*角の丸み*/
+    text-align: center;
+    font-size: 100px;
+    padding-bottom: 20px;
+    padding-top: auto;
+}
+.index-box2 {
+    padding-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    /* height: 100px; */
+    background: #a82e2e;
+    border: solid 3px #810000;/*線*/
+    border-radius: 200px;/*角の丸み*/
+    text-align: center;
+    font-size: 50px; 
+    font-family: 'New Tegomin', serif;
+    transition-property: background;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0.1s;
+}
+.index-box2:hover {
+    background-color: #810000;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0.1s;
+}
+.index-box2 > a {
+    color: #2b2e4a;/*文字色*/
+    font-weight: bold;
+}
+
 /*
  * upload.html
  *
-*/
-#preview {
-    height: 40vh;
+ */
+.upload-container {
+    background-color: #3c3c3c;
+    height: 100vh;
+}
+.upload-explain {
+    font-size: 3em;
     text-align: center;
+    color: #ddd;/*文字色*/
+    margin: 40px auto 50px;
+    /* -webkit-text-stroke: 0.5px #dddddd; */
+}
+.upload-content {
+    display: flex;
+}
+.upload-image-preview {
+    height: 300px;
+    width: 50vw;
+    text-align: center;
+}
+#preview {
+    height: 100%;
+    margin: auto;
+}
+.upload-buttons {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.upload-button1 {
+    margin: 10px auto;
+    padding: 20px;
+    /* width: 200px; */
+    /* height: 80px; */
+    font-weight: bold;
+    color: #2b2e4a;/*文字色*/
+    background: #a82e2e;
+    border: solid 3px #810000;/*線*/
+    border-radius: 200px;/*角の丸み*/
+    text-align: center;
+    font-size: 25px;
+    float: left;
+    font-family: 'New Tegomin', serif;
+    transition-property: background;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0.1s;
+}
+.upload-button1:hover{
+    /* width: 200px; */
+    /* height: 80px; */
+    font-weight: bold;
+    color: #2b2e4a;/*文字色*/
+    background: #810000;
+    border: solid 3px #810000;/*線*/
+    border-radius: 200px;/*角の丸み*/
+    text-align: center;
+    transition-property: background;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0.1s;
+}
+.upload-button2 {
+    margin-top: 10px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    width: 200px;
+    /* height: 80px; */
+    font-size: 25px;
+    font-weight: bold;
+    color: #2b2e4a;/*文字色*/
+    background: #a82e2e;
+    border: solid 3px #810000;/*線*/
+    border-radius: 200px;/*角の丸み*/
+    text-align: center;
+    vertical-align: middle;
+}
+.upload-button2:hover {
+    margin-top: 10px;
+    padding: 20px;
+    width: 200px;
+    /* height: 80px; */
+    font-weight: bold;
+    color: #2b2e4a;/*文字色*/
+    background-color: #810000;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0.1s;
+
 }
 
 /*
  * main.html
  *
-*/
+ */
 .stopwatch {
     font-size: 30px;
 }
@@ -33,3 +196,4 @@
     opacity: 0.3;
     display: none;
 }
+ 
