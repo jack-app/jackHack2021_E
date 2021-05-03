@@ -5,16 +5,18 @@ html,body {
 .index-container {
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: #3c3c3c;
 }
 .index-header-comment {
-    font-weight: bold;
+    font-weight: 10px;
     font-size: 50px;
     padding-top: 100px;
     padding-bottom: 50px;
     padding-left: 50px;
-    color: #2b2e4a;
+    color: black;
     font-family: 'New Tegomin', serif;
+    -webkit-text-stroke: 0.5px #dddddd;
+
 }
 .index-box1 {
     margin: auto;
@@ -22,7 +24,7 @@ html,body {
     height: 300px;
     font-weight: bold;
     color:#2e2b4a;/*文字色*/
-    background: #810000;
+    background: #a82e2e;
     border: solid 3px #810000;/*線*/
     border-radius: 200px;/*角の丸み*/
     text-align: center;
@@ -41,30 +43,78 @@ html,body {
     height: 100px;
     font-weight: bold;
     color: #2b2e4a;/*文字色*/
+    background: #a82e2e;
+    border: solid 3px #810000;/*線*/
+    border-radius: 200px;/*角の丸み*/
+    text-align: center;
+    font-size: 50px; 
+    font-family: 'New Tegomin', serif;
+    transition-property: background;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0.1s;
+}
+.index-box2:hover {
+    padding-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 100px;
+    font-weight: bold;
+    color: #2b2e4a;/*文字色*/
     background: #810000;
     border: solid 3px #810000;/*線*/
     border-radius: 200px;/*角の丸み*/
     text-align: center;
     font-size: 50px; 
     font-family: 'New Tegomin', serif;
+    transition-property: background;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0.1s;
 }
 .upload-explain {
-    font-weight: bold;
-    font-size: 50px;
+    font-weight: 10px;
+    font-size: 75px;
     text-align: center;
-    color: #353a53;/*文字色*/
+    color: black;/*文字色*/
     margin: 30px;
     font-family: 'New Tegomin', serif;
+    -webkit-text-stroke: 0.5px #dddddd;
 }
 .upload-container {
-    background-color: black;
+    background-color: #3c3c3c;
     height: 100vh;
 }
 header {
-    background-color: #810000;
+    background-color: #a82e2e;
     height: 50px;
 }
 .upload-button1 {
+    margin-top: 10px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    width: 200px;
+    height: 80px;
+    font-weight: bold;
+    color: #2b2e4a;/*文字色*/
+    background: #a82e2e;
+    border: solid 3px #810000;/*線*/
+    border-radius: 200px;/*角の丸み*/
+    text-align: center;
+    font-size: 30px;
+    float: left;
+    font-family: 'New Tegomin', serif;
+    transition-property: background;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0.1s;
+}
+.upload-button1:hover{
     margin-top: 10px;
     margin-bottom: auto;
     margin-left: auto;
@@ -81,8 +131,35 @@ header {
     font-size: 30px;
     float: left;
     font-family: 'New Tegomin', serif;
+    transition-property: background;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0.1s;
 }
 .upload-button2 {
+    margin-top: 10px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    width: 200px;
+    height: 80px;
+    font-weight: bold;
+    color: #2b2e4a;/*文字色*/
+    background: #a82e2e;
+    border: solid 3px #810000;/*線*/
+    border-radius: 200px;/*角の丸み*/
+    text-align: center;
+    vertical-align: middle;
+    font-size: 25px;
+    font-family: 'New Tegomin', serif;
+    transition-property: background;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0.1s;
+
+}
+.upload-button2:hover {
     margin-top: 10px;
     margin-bottom: auto;
     margin-left: auto;
@@ -99,6 +176,11 @@ header {
     font-size: 25px;
     float: none;
     font-family: 'New Tegomin', serif;
+    transition-property: background;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0.1s;
+
 }
 .upload-image-preview {
     background-color: gray;
