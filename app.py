@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, session, redirect, url_for
 import cv2
 import os
+import shutil
 import create_image
 from werkzeug.utils import secure_filename
 
@@ -18,6 +19,8 @@ def upload():
         file.save("./static/image/upload/bg_image" + os.path.splitext(filename)[1])
         return redirect(url_for('main'))
     else:
+        shutil.rmtree('./static/image/upload')
+        os.mkdir('./static/image/upload')
         return render_template("upload.html")
 
 @app.route('/main', methods=['GET','POST'])

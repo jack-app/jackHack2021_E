@@ -1,11 +1,12 @@
 {%- extends "layout.html" %}
 {%- block content %}
-<div class="main-container">
+<div class="container2">
+    <div style="height: 8vh; width: 100vw;"></div>
+    <div class="main-box1">
+        経過時間<span id="timer">00:00.00</span>
+    </div>
     <div id="imageArea">
         <img src="../static/image/offla-hide.png" id="hideImage">
-    </div>
-    <div class="stopwatch">
-        <p id="timer">00:00.00</p>
     </div>
 </div>
 <audio id="sound-file1" preload="auto">
@@ -22,4 +23,9 @@
     let answer_area_x = {{ answer_area_x | tojson }};
     let answer_area_y = {{ answer_area_y | tojson }};
 </script>
+  <!-- <div class="minicontainer">
+    <div class="main-box2">READY</div>
+    <div class="main-box3">START</div>
+    <div class="main-box4">FINISH</div>
+  </div> -->
 {%- endblock %}
