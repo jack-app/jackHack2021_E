@@ -60,7 +60,7 @@ def create_image():
     upload_path = "static/image/upload/" + os.listdir("static/image/upload")[0]
     cv_background_image = cv.imread(upload_path)
     cv_overlay_image = cv.imread(
-        "static/image/ninja_hashiru.png",
+        "static/image/offla.png",
         cv.IMREAD_UNCHANGED)  # IMREAD_UNCHANGEDを指定しα込みで読み込む
     size = cal_image_size(cv_background_image, cv_overlay_image)
     cv_overlay_image = cv.resize(cv_overlay_image, size)
@@ -89,6 +89,7 @@ def cal_image_size(bg_img, overlay_img):
         new_overlay_width = new_overlay_height * overlay_width / overlay_height
 
     size = (int(new_overlay_height), int(new_overlay_width))
+    size = (80, 130)
     return size 
 
 def cal_answer_area(size, point):

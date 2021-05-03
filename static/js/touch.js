@@ -10,10 +10,9 @@ $(function(){
     const areaOffsetLeft = $("#hideImage").offset().left;
     $(".main-modal-mask").offset({ top: areaOffsetTop, left: areaOffsetLeft });
 
-    $("#imageArea").on('click', function(e) {
+    $("#hideImage").on('click', function(e) {
         console.log("座標" + e.offsetX + "," + e.offsetY);
         console.log("答え" + answer_area_x + "," + answer_area_y);
-        console.log(cancelFlg);
 
         if(cancelFlg){
             cancelFlg = false;
