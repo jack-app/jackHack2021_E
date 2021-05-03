@@ -3,9 +3,9 @@ FROM python:3.6
 # install heroku cli
 RUN curl https://cli-assets.heroku.com/install.sh | sh
 
-RUN apt-get update -qq
-RUN pip install --upgrade pip
+RUN apt-get update && apt-get upgrade -y -qq
 RUN apt-get install -y libgl1-mesa-dev
+RUN pip install --upgrade pip
 
 ENV DISPLAY=:99
 
